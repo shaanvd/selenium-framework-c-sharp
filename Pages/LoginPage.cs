@@ -9,7 +9,7 @@ public sealed class LoginPage : BasePage
     [FindsBy(How = How.Id, Using = "login-button")] private IWebElement? LoginButton { get; set; }
     [FindsBy(How = How.CssSelector, Using = "h3[data-test='error']")] private IWebElement? ErrorMessage { get; set; }
     public LoginPage(IWebDriver driver) : base(driver) => PageFactory.InitElements(driver, this);
-    public LoginPage Open(string url)
+    public LoginPage Open(string? url)
     { 
         if (url is null) throw new ArgumentNullException(nameof(url));
         Driver.Navigate().GoToUrl(url); 
