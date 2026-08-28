@@ -1,8 +1,13 @@
-﻿using NUnit.Framework;
+﻿using Allure.NUnit;
+using Allure.NUnit.Attributes;
+using NUnit.Framework;
 using SauceDemo.Automation.Core;
 using SauceDemo.Automation.Pages;
 
 namespace SauceDemo.Automation.Tests;
+
+[AllureNUnit]
+[AllureEpic("SauceDemo Web UI")]
 
 [TestFixture]
 public sealed class InventoryTests : BaseTest
